@@ -15,7 +15,19 @@ int main()
    
     while(true)
     {   
+        HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+        
+        int x;
+        x++;
+        if(x == 15)
+        {
+            x = 0;
+        }
+
+        SetConsoleTextAttribute(hConsole, x);
+            
         system("cls");
+        Sleep(0.3);
         cout << "\n\n\n\n\n" << endl;
         
         for(i = 0; i<=scale; i++)
